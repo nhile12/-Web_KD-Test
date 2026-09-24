@@ -1,0 +1,53 @@
+BODY {
+    color: green;
+    background: white url("Draft.jpg") no-repeat fixed center center;
+}
+H1, H2, H3, H4, H5, H6 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+UL {
+    list-style: circle url("image/Apple.jpg") outside;
+}
+UL B {
+    color: rgb(155,0,0);
+}
+A {
+    font-size: 0.9em;
+    color: green;
+    text-decoration: none;
+}
+A:hover {
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.Special {
+    color: rgb(153,102,6);
+    font-weight: bold;
+}
+DIV.Article {
+    padding: 0.5em;
+    border-style: solid;
+    border-width: 2px;
+    background-color: rgb(252,221,163);
+    width: 250px;
+    float: right;
+}
+.feedback-box {
+    background-color: silver;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+.feedback-box p {
+    margin: 0 0 5px 0;
+    color: green;
+}
+
+.footer {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: green;
+    font-style: normal;
+}
