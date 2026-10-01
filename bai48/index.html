@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            background-color: #b5d8ff;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .wrapper {
+            background-color: #a5d2f7;
+            border: 2px solid #000080;
+            border-radius: 8px;
+            padding: 25px 40px;
+            width: 650px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .header img {
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+
+        h1 {
+            color: #000066;
+            margin: 5px 0;
+        }
+
+        p {
+            text-align: center;
+            color: #000;
+            margin-top: 0;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 6px 0;
+        }
+
+        label {
+            min-width: 120px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #888;
+            border-radius: 3px;
+            max-width: 250px;
+        }
+
+        #city {
+            width: 120px;
+        }
+
+        #state {
+            width: 50px;
+        }
+
+        #zip {
+            width: 80px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+
+        hr {
+            border: 1px solid #000080;
+            margin: 15px 0;
+        }
+
+        table {
+            margin-left: 150px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        button {
+            background-color: #d0e8ff;
+            border: 1px solid #000080;
+            border-radius: 5px;
+            padding: 6px 15px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #ffffcc;
+        }
+    </style>
+
+    <script>
+        function register() {
+            alert("Đăng ký thành công!");
+        }
+        function cancelForm() {
+            document.getElementById("regForm").reset();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <img src="./hinh/Jackson.gif" alt="Jackson Logo">
+            <h1>Registration Form</h1>
+            <p>Register your Jackson Electronics product here</p>
+        </div>
+
+        <form id="regForm">
+            <div class="form-row">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname">
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname">
+            </div>
+
+            <div class="form-row">
+                <label for="add1">Address #1:</label>
+                <input type="text" id="add1">
+            </div>
+
+            <div class="form-row">
+                <label for="add2">Address #2:</label>
+                <input type="text" id="add2">
+            </div>
+
+            <div class="form-row">
+                <label for="city">City:</label>
+                <input type="text" id="city" style="width: 150px;">
+                <label for="state">State:</label>
+                <input type="text" id="state" style="width: 40px;">
+                <label for="zip">Zip:</label>
+                <input type="text" id="zip" style="width: 80px;">
+            </div>
+
+            <div class="form-row">
+                <label for="country">Country:</label>
+                <select id="country">
+                    <option>United States</option>
+                    <option>Vietnam</option>
+                    <option>Japan</option>
+                    <option>France</option>
+                </select>
+            </div>
+
+            <hr>
+
+            <div class="form-row">
+                <label for="product">Product:</label>
+                <select id="product">
+                    <option>ScanMaster</option>
+                    <option>AudioPro</option>
+                    <option>SmartView</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="date">Date Purchased:</label>
+                <input type="text" id="date" placeholder="mm/dd/yyyy">
+            </div>
+
+            <div class="form-row">
+                <label for="serial">Serial #:</label>
+                <input type="text" id="serial">
+            </div>
+
+            <div class="form-row">
+                <label>Used for:</label>
+                <table>
+                    <tr>
+                        <td><input type="radio" name="usedfor"> Home</td>
+                        <td><input type="radio" name="usedfor"> Educational Institution</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="usedfor" checked> Business</td>
+                        <td><input type="radio" name="usedfor"> Other</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="usedfor"> Government</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="form-row">
+                <label>System (check all that apply):</label>
+                <table>
+                    <tr>
+                        <td><input type="checkbox"> Windows</td>
+                        <td><input type="checkbox"> UNIX</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"> Macintosh</td>
+                        <td><input type="checkbox"> Other</td>
+                    </tr>
+                </table>
+            </div>
+
+            <hr>
+
+            <div class="form-row">
+                <label for="comments">Comments?</label>
+                <textarea id="comments" rows="5" cols="70"></textarea>
+            </div>
+
+            <div class="buttons">
+                <button type="button" onclick="register()">Click to register</button>
+                <button type="button" onclick="cancelForm()">Click to cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
