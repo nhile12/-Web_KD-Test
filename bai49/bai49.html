@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Classifieds</title>
+    <style>
+        body {
+            background-color: #d7f6f7;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .container {
+            width: 700px;
+            background-color: #b6f2f5;
+            border: 1px solid #999;
+            padding: 25px 40px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: red;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #999;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        table {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            width: 95%;
+            padding: 5px;
+            border: 1px solid #999;
+            border-radius: 3px;
+        }
+
+        input[type="date"] {
+            padding: 3px;
+            border: 1px solid #999;
+            border-radius: 3px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        input[type="image"] {
+            margin: 0 15px;
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .btn-label {
+            display: inline-block;
+            font-size: 11pt;
+            color: #333;
+            margin: 5px 25px 0;
+        }
+    </style>
+
+    <script>
+        function searchFunction() {
+            alert("Giả lập chức năng Search!");
+            return false;
+        }
+        function showHelp() {
+            window.open("https://www.google.com", "HelpWindow", "width=800,height=600");
+            return false;
+        }
+        function clearForm() {
+            document.getElementById("searchForm").reset();
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Online Classifieds Search Form</h1>
+        <hr>
+
+        <form id="searchForm">
+            <h3> 1) Search for a classified in the following sections:</h3>
+            <table>
+                <tr>
+                    <td><input type="radio" name="section" value="Employment"> Employment</td>
+                    <td><input type="radio" name="section" value="Personal"> Personal</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="section" value="ForSale" checked> For Sale</td>
+                    <td><input type="radio" name="section" value="Misc"> Miscellaneous</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="section" value="Housing"> Housing</td>
+                    <td><input type="radio" name="section" value="All"> All of the above</td>
+                </tr>
+            </table>
+
+            <h3>2) Search the following publications:</h3>
+            <table>
+                <tr>
+                    <td><input type="checkbox" checked> Midwest Times</td>
+                    <td><input type="checkbox"> Modern News</td>
+                    <td><input type="checkbox"> Employment Today</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" checked> Great Lakes Classifieds</td>
+                    <td><input type="checkbox"> Middleton Daily</td>
+                    <td><input type="checkbox"> Cashtown Daily News</td>
+                </tr>
+            </table>
+
+            <h3>3) From <input type="date"> to <input type="date"></h3>
+
+            <h3>4) Enter a few keywords to describe the classified:</h3>
+            <input type="text" placeholder="Enter keywords...">
+
+            <h3>5) Click one of the options below:</h3>
+            <div class="buttons">
+                <input type="image" src="./hinh/Search.gif" alt="Search" onclick="return searchFunction();">
+                <input type="image" src="./hinh/Help.gif" alt="Help" onclick="return showHelp();">
+                <input type="image" src="./hinh/Cancel.gif" alt="Cancel" onclick="return clearForm();"><br>
+                <span class="btn-label">Search</span>
+                <span class="btn-label">Help</span>
+                <span class="btn-label">Cancel</span>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
